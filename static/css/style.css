@@ -1,0 +1,187 @@
+.hud {
+  text-align: center;
+  padding: 15px ;
+  background-color: #1a3a4a;
+  color: white;
+  font-family: "Exo 2", monospace;
+}
+button {
+    padding: 11px 25px;
+    font-family: "Exo 2", monospace;
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: 1.5px solid #000000;
+    box-shadow: 0px 4px 0px #000000;
+}
+.botones-csv {
+    margin-top: 20px; 
+
+}
+
+button:hover {
+    transform: translateY(2px);       
+    box-shadow: 0px 2px 0px #000000; 
+}
+
+button:active {
+    transform: translateY(4px);        
+    box-shadow: 0px 0px 0px #000000;
+}
+
+button:disabled {
+    transform: none;
+    box-shadow: 0px 4px 0px #000000;
+    cursor: not-allowed;
+}
+
+#crearcsv {
+    background-color: #2e7d52;
+}
+
+#crearcsv:hover {
+    background-color: #1f5c3a;
+}
+
+#crearcsv:disabled {
+    background-color: #0f2e1d;
+}
+
+#eliminarcsv {
+    background-color: #8b2a2a;
+}
+
+#eliminarcsv:hover {
+    background-color: #6b1f1f;
+}
+
+#eliminarcsv:disabled {
+    background-color: #3a0f0f;
+}
+
+#Iniciar_procesos {
+    background-color: #2e7d52;
+    float: right; 
+    margin-left: 10px;
+}
+
+#Iniciar_procesos:hover {
+    background-color: #1f5c3a;
+}
+
+#Iniciar_procesos:disabled {
+    background-color: #0f2e1d;
+}
+
+#Detener_procesos {
+    background-color: #8b2a2a;
+    float: right; 
+}
+
+#Detener_procesos:hover {
+    background-color: #6b1f1f;
+}
+
+#Detener_procesos:disabled {
+    background-color: #3a0f0f;
+}
+.temperatura {
+  font-family: "Exo 2", monospace;  
+  border: 1px solid #864f4f;
+  padding: 16px;
+  width: 600px;
+  border-radius: 6px;
+  color: #000000;
+  margin-top: 20px;
+  height: 680px; 
+}
+.humedad {
+  font-family: "Exo 2", monospace;  
+  border: 1px solid #864f4f;
+  padding: 16px;
+  width: 600px;
+  border-radius: 6px;
+  color: #000000;
+  margin-top: 20px;
+  height: 680px; 
+}
+.presion {
+  font-family: "Exo 2", monospace;  
+  border: 1px solid #864f4f;
+  padding: 16px;
+  width: 600px;
+  border-radius: 6px;
+  color: #000000;
+  margin-top: 20px; 
+  height: 680px;
+}
+.contenedor {
+  display: flex;
+  justify-content: space-between; /* separa horizontalmente */
+  align-items: flex-start; /* misma altura arriba */
+  gap: 20px; /* espacio entre secciones */
+  height: 750px;
+}
+
+#log-panel1,
+#log-panel2,
+#log-panel3 {
+  background:#0f2a38; 
+  color:#e6edf3; 
+  padding:12px; 
+  height:300px; 
+  overflow-y:auto; 
+  font-family: "VT323", "Roboto Mono", monospace;
+  font-size: 18px;
+  border: 1px solid #2f4f5f;  
+  border-radius: 6px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.4);
+  margin-top: 20px;
+}
+
+/*ESTILOS PARA SCROLLBAR DE REGISTROS */
+/* Scrollbar completo */
+#log-panel1::-webkit-scrollbar,
+#log-panel2::-webkit-scrollbar,
+#log-panel3::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Fondo del scrollbar */
+#log-panel1::-webkit-scrollbar-track,
+#log-panel2::-webkit-scrollbar-track,
+#log-panel3::-webkit-scrollbar-track {
+    background: #0a1f2a;
+    border-left: 1px solid #1c3b4a;
+}
+
+/* La barra que se mueve */
+#log-panel1::-webkit-scrollbar-thumb,
+#log-panel2::-webkit-scrollbar-thumb,
+#log-panel3::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #c9a44c, #a8842c);
+    border-radius: 4px;
+}
+
+/* Hover de la barra */
+#log-panel1::-webkit-scrollbar-thumb:hover,
+#log-panel2::-webkit-scrollbar-thumb:hover,
+#log-panel3::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #e0c067, #b8953a);
+}
+
+/* Detalle de color lateral por tipo */
+#log-panel1 {
+  border-left: 3px solid #e74c3c; /* temperatura */
+}
+
+#log-panel2 {
+  border-left: 3px solid #3498db; /* humedad */
+}
+
+#log-panel3 {
+  border-left: 3px solid #22d004; /* presión */
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensores Meteorológicos </title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" type="image/png" href="/static/images/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:slnt,wght@-5,100..900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<header class="hud">
+    <h1>Sistema Meteorológico</h1> 
+    <p class="subtitle">Temperatura -- Humedad -- Presión</p>
+</header>
+
+
+
+<div class="botones-csv">
+    <button id="crearcsv">Crear CSV</button>
+    <button id="eliminarcsv">Eliminar CSV</button>
+    <button id="Iniciar_procesos">Encender sensores</button>
+    <button id="Detener_procesos">Apagar sensores</button>
+</div>
+
+<div class="contenedor">
+  <section class="temperatura">
+    <center><h2>Temperatura</h2></center>
+    <canvas id="graficaTemperatura"></canvas>
+    <div id="log-panel1">listo para iniciar...</div>
+  </section>
+
+  <section class="humedad">
+    <center><h2>Humedad</h2></center>
+    <canvas id="graficaHumedad"></canvas>
+    <div id="log-panel2">listo para iniciar...</div>
+  </section>
+
+  <section class="presion">
+    <center><h2>Presión</h2></center>
+    <canvas id="graficaPresion"></canvas>
+    <div id="log-panel3">listo para iniciar...</div>
+  </section>
+</div>
+<footer class="hud">
+  <p class="subtitle">Por: Juan Lopez, Juan Garcia y Santiago Cely</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}" ></script>
+</body>
+
+
+</html>
